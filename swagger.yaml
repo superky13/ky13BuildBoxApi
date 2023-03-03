@@ -1,0 +1,30 @@
+basePath: /
+host: 192.168.1.206:8080
+info:
+    title: 'ky13buildbox api:'
+    version: v1.0
+paths:
+    /api/v1:
+        get:
+            operationId: handleApiRequests
+            responses:
+                "200":
+                    description: ""
+                "400":
+                    description: ""
+            security:
+                - apiKey:
+                    - '[]'
+            tags:
+                - admin
+produces:
+    - application/json
+schemes:
+    - http
+    - https
+securityDefinitions:
+    apiKey:
+        in: header
+        name: authorization
+        type: apiKey
+swagger: "2.0"
